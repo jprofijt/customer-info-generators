@@ -20,3 +20,11 @@ def generate_mobile_number():
     random_pre_number = str(random.randint(1, 5))
 
     return "06" + random_pre_number + random_number
+
+
+def main():
+    print(generate_mobile_number())
+
+
+if __name__ == "__main__":
+    main()

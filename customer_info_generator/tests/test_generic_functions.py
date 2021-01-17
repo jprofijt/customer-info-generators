@@ -4,6 +4,7 @@ import unittest
 
 from customer_info_generator.generator_module import generic_functions as functions
 
+
 class TestGenericFunctions(unittest.TestCase):
     def test_random_number_lenght(self):
         self.assertEqual(len(functions.generate_random_number_as_specified(10)), 10)
