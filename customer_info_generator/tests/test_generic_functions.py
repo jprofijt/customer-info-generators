@@ -1,14 +1,16 @@
+#!/usr/bin/env python
+
 import unittest
 
-import generators
+from customer_info_generator.generator_module import generic_functions as functions
 
 class TestGenericFunctions(unittest.TestCase):
     def test_random_number_lenght(self):
-        self.assertEqual(len(generators.generic_functions.generate_random_number_as_specified(10)), 10)
+        self.assertEqual(len(functions.generate_random_number_as_specified(10)), 10)
 
     def test_throw_error_at_zero(self):
         try:
-            generators.generic_functions.generate_random_number_as_specified(0)
+            functions.generate_random_number_as_specified(0)
         except ValueError:
             pass
         except Exception:
@@ -18,7 +20,7 @@ class TestGenericFunctions(unittest.TestCase):
 
     def test_throw_error_at_negative(self):
         try:
-            generators.generic_functions.generate_random_number_as_specified(-1)
+            functions.generate_random_number_as_specified(-1)
         except ValueError:
             pass
         except Exception:

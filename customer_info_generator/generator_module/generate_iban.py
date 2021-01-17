@@ -2,14 +2,14 @@
 """Python script to generate a IBAN number. Only dutch accounts for now."""
 
 import random
-import generic_functions
+import customer_info_generator.generator_module.generic_functions as gen
 
 def generate_bank_number():
     """Generates a random number which is 10 character long.
 
     gets a random number between 1 and 999999999, then adds zero's in front to keep a length of 10.
     """
-    return generic_functions.generate_random_number_as_specified(10)
+    return gen.generate_random_number_as_specified(10)
 
 
 def calculate_control_number(land_code, bank_code, bank_number):
