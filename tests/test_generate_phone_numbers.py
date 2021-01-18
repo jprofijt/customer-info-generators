@@ -7,7 +7,7 @@ import re
 from customer_info_generator.generator_module import generate_phone_numbers as generator
 
 
-class TestGenerateMobileNumer(unittest.TestCase):
+class TestGenerateMobileNumber(unittest.TestCase):
 
     def test_number_starts_with(self):
         mobile_number = generator.generate_mobile_number()
