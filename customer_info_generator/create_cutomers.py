@@ -29,8 +29,8 @@ def main():
         output = output.replace('.csv', '_{0}.csv'.format(i))
         i += 1
 
-    with open(output, 'w') as csvfile:
-        writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_NONE)
+    with open(output, 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',', quotechar='|', quoting=csv.QUOTE_NONE)
         writer.writerow(get_list_order())
         for n in range(1, times):
             customer = Customer()
